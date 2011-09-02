@@ -1,0 +1,25 @@
+<%= form_for @article, :html => { :id => :article_form } do |f| %>
+  <% if @article.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@article.errors.count, "error") %> prohibited this article from being saved:</h2>
+
+      <ul>
+      <% @article.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+		<%= f.text_field :title, :id => :title, :placeholder => 'Click here to add title' %>
+		<%= f.text_area :content, :id => :text,  :placeholder => "Click here to create your text! You can use Markdown syntax." %>
+	 	
+		<%= f.text_field :password, :id => :password, :placeholder => "Password(to edit the page)" %>
+		
+		<div>
+			<label id="private_label" for="private">&nbsp;</label>
+			<%= f.check_box :isPrivate,  :id =>:private, :title => "Check to make your page private" %>	
+			
+			<% @label_submit = @article.id.nil? ? "Create the Page" : "Save the Page" %>
+			<%= f.submit @label_submit, :id => :create %>	
+		</div>
+<% end %>

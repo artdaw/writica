@@ -7,6 +7,11 @@
 /*	Resets
 	------	*/
 
+/* @import url(http://fonts.googleapis.com/css?family=Swanky+and+Moo+Moo); */
+@import url(http://fonts.googleapis.com/css?family=Dancing+Script);
+@import url(http://fonts.googleapis.com/css?family=PT+Serif+Caption:400,400italic);
+
+
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, 
 p, blockquote, pre, a, abbr, address, cite, code, del, dfn, em, 
 img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, hr, 
@@ -86,53 +91,71 @@ cols    1     2      3      4      5      6      7      8      9      10
 px      68    160    252    344    436    528    620    712    804    896    */
 
 body {
+	font-family: Arial, Helvetica, sans-serif;;
 	background: #fff;
 	color: #444;
 	font-size: 16px;
 	-webkit-text-size-adjust: 100%; /* Stops Mobile Safari from auto-adjusting font-sizes */
 }
 
-nav {
-	background: #000;
-	height: 10px;
+h1, h2, h3 {
+	font-family: 'PT Serif Caption', serif;
 }
 
-section, footer, header hgroup {
+#body, #header hgroup {
 	width: 896px;
 	margin: 0 auto;
 }
 
-.footer {
-	position: absolute;
-	bottom: 48px;
+/* header start */
+#header {
 	width: 100%;
-	text-align: center;
-	font-size: 12px;
-}
-
-header {
-	color: #fff;
 	background: #000;
-	margin-bottom: 24px;	
+	margin-bottom: 24px;
 }
 
-header h1 {
-	letter-spacing: 1px;
-	font-size: 42px;
-	line-height: 48px;
+#header hgroup h1 {
 	float: left;
 }
 
-header h2 {
-	font-size: 16px;
-	line-height: 48px;
-	margin-left: 140px;
+#header hgroup {
+	color: #fff;
+}
+
+#header hgroup h1 a {
+	color: #fff;
 	font-weight: normal;
-	padding-top: 3px;
+	/* font-family: 'Swanky and Moo Moo', cursive; */
+	font-family: 'Dancing Script', Georgia, Times, serif;;
+	font-size: 42px;
+	line-height: 42px;
+	text-decoration: none;
+}
+
+#header hgroup h2 {
+	font-size: 14px;
+	margin-left: 120px;
+	font-weight: normal;
+	line-height: 48px;
+}
+
+
+/* header end */
+
+
+
+/* home page start */
+
+#text {
+	margin-bottom: 24px;
+}
+
+#article_form div {
+	float: right;
 }
 
 textarea, input#title {
-	width: 876px;
+	width: 100%;
 	border: 1px dashed #444;
 	font-size: 16px;
 	padding: 10px;
@@ -147,31 +170,11 @@ textarea {
 	height: 300px;
 }
 
-#logo {
-	font-weight: normal;
-	font-family: 'Swanky and Moo Moo', cursive;
-}
-
-article footer {
-	margin-top: 24px;
-	font-size: 14px;
-}
-
-#create_section, #password_section {
-	float: right;
-	width: auto;
-	margin: 0;
-}
-
-#password_section {
-	float: left;
-}
-
 #create {
 	width: 158px;
 	height: 30px;
 	display: inline-block;
-	margin-left: 24px;	
+	margin-left: 20px;	
 	cursor: pointer;
 	font-size: 16px;
 	border: 1px solid #AAA;
@@ -207,7 +210,6 @@ article footer {
 }
 
 #private_label {
-	background-image: url('images/unlock.png');
 	background-repeat: no-repeat;
 	display: inline-block;
 	width: 16px;
@@ -218,8 +220,40 @@ article footer {
 #password {
 	font-size: 14px;
 	padding: 4px;
-	width: 242px;
+	width: 250px;
 }
+
+/* home page end */
+
+
+/* article start */
+
+article header {
+	margin-bottom: 48px;
+}
+
+article header h1 {
+	text-align: center;
+	font-style: italic;
+	letter-spacing: 2px;
+}
+
+.edit_article {
+	font-size: 14px;
+	color: green;
+}
+
+/* article end */
+
+
+/* footer start */
+#footer {
+	margin: 96px 0 24px 0;
+	text-align: center;
+	font-size: 12px;
+}
+/* footer end */
+
 
 /*		Tablet Layout: 768px.
 		Gutters: 24px.

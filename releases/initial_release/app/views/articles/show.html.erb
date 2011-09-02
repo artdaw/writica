@@ -1,0 +1,14 @@
+<article>
+	<header>
+		<h1>
+			<%= @article.title %>
+		</h1>
+	</header>
+	<section>
+		<%= @article.content %>
+	</section>
+</article>
+<% content_for :footer do %>
+	<%= link_to 'edit page', edit_article_path(@article), :class => :edit_article %>
+<% end %>
+

@@ -1,2 +1,24 @@
-// Place your application-specific JavaScript functions and classes here
-// This file is automatically included by javascript_include_tag :defaults
+	function lock(checkbox) {
+		if(checkbox.is(':checked')){
+			$('#private_label').css('background-image', 'url("/images/lock.png")');	
+		} else {
+			$('#private_label').css('background-image', 'url("/images/unlock.png")');	
+		}  
+	}
+	
+	$(document).ready(function(){
+		lock($('#private'));
+		
+		$('#private').click(function(event){
+			lock($(event.target));
+		});
+		
+		$('#create').live({
+			mousedown: function(event){
+				$(event.target).addClass('pressed');
+			},
+			mouseup: function(event){
+				$(event.target).removeClass('pressed');
+			}
+		})
+	});
