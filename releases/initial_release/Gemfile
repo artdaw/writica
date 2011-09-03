@@ -29,5 +29,5 @@ gem 'sqlite3'
 # group :development, :test do
 #   gem 'webrat'
 # end
-gem 'unicorn'
+gem 'ruby-debug'
 gem 'jquery-rails'

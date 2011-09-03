@@ -2,4 +2,5 @@
 # See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  validation:
+      isPrivate_checked_if_password: "If you make your page private you must supply a password"

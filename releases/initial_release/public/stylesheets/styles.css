@@ -107,6 +107,15 @@ h1, h2, h3 {
 	margin: 0 auto;
 }
 
+.validation_error {
+	font-size: 12px;
+	color: #ff0000;
+}
+
+.validation_error_field input, .validation_error_field textarea{
+	border: 1px solid #ff0000;
+}
+
 /* header start */
 #header {
 	width: 100%;
@@ -146,7 +155,7 @@ h1, h2, h3 {
 
 /* home page start */
 
-#text {
+.text {
 	margin-bottom: 24px;
 }
 
@@ -154,14 +163,14 @@ h1, h2, h3 {
 	float: right;
 }
 
-textarea, input#title {
+textarea, input.title {
 	width: 100%;
 	border: 1px dashed #444;
 	font-size: 16px;
 	padding: 10px;
 }
 
-input#title {
+input.title {
 	margin-bottom: 24px;
 }
 
@@ -170,7 +179,7 @@ textarea {
 	height: 300px;
 }
 
-#create {
+.create {
 	width: 158px;
 	height: 30px;
 	display: inline-block;
@@ -190,7 +199,7 @@ textarea {
 	box-shadow: 1px 1px 3px #999;
 }
 
-#create:hover {
+.create:hover {
 	background: #CCC;
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#EEE), color-stop(1, #aaa));
 	background-image: -moz-linear-gradient(top, #EEE, #aaa);
@@ -199,7 +208,7 @@ textarea {
 	background-image: linear-gradient(top, #EEE, #aaa);
 }
 
-#create.pressed {
+.create.pressed {
 	background: #CCC;
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#ccc), color-stop(1, #eee));
 	background-image: -moz-linear-gradient(top, #ccc, #eee);
@@ -217,7 +226,7 @@ textarea {
 	line-height: 16px;
 }
 
-#password {
+.article_password {
 	font-size: 14px;
 	padding: 4px;
 	width: 250px;
