@@ -1,0 +1,15 @@
+<%= form_for @article, :html => { :id => :article_form } do |f| %>
+		
+		<%= format_error_message(@article, :title) %>
+		<%= f.text_field :title, :class => :title, :placeholder => 'Add title' %>
+		<%= format_error_message(@article, :content) %>
+		<%= f.text_area :content, :class => :text,  :placeholder => 'Create your text' %>
+		
+		<%= link_to 'Delete the Page', @article, :confirm => 'Are you sure?', :method => :delete, :class => 'red' %>
+		
+		<div>
+			<label id="private_label" for="private">&nbsp;</label>
+			<%= f.check_box :isPrivate,  :class =>:private, :title => "Check to make your page private" %>		
+			<%= f.submit "Save the Page", :class => :create %> 
+		</div>
+<% end %>
