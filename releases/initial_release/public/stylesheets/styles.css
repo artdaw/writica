@@ -74,11 +74,11 @@ body {
 
 /* Selection colours (easy to forget) */
 
-::selection 	 	{background: rgb(255,255,158);}
-::-moz-selection 	{background: rgb(255,255,158);}
+::selection 	 	{background: #EAF1F3;}
+::-moz-selection 	{background: #EAF1F3;}
 img::selection 		{background: transparent;}
 img::-moz-selection	{background: transparent;}
-body {-webkit-tap-highlight-color: rgb(255,255,158);}
+body {-webkit-tap-highlight-color: #EAF1F3;}
 
 
 
@@ -116,6 +116,10 @@ h1, h2, h3 {
 	border: 1px solid #ff0000;
 }
 
+
+.red {
+	color: #ff0000;
+}
 /* header start */
 #header {
 	width: 100%;
@@ -154,7 +158,12 @@ h1, h2, h3 {
 
 
 /* home page start */
-
+.description {
+	width: 712px;
+	text-align: center;
+	margin: 0 auto;
+	margin-bottom: 48px;
+}
 .text {
 	margin-bottom: 24px;
 }
@@ -163,11 +172,13 @@ h1, h2, h3 {
 	float: right;
 }
 
-textarea, input.title {
+textarea, input.title, .article_password {
 	width: 100%;
-	border: 1px dashed #444;
+	border: 1px solid #ddd;
 	font-size: 16px;
 	padding: 10px;
+	box-shadow: 4px 4px #EAF1F3, -4px -4px #EAF1F3, -4px 4px #EAF1F3, 4px -4px #EAF1F3;
+	border-radius: 4px;
 }
 
 input.title {
@@ -247,9 +258,26 @@ article header h1 {
 	letter-spacing: 2px;
 }
 
-.edit_article {
-	font-size: 14px;
+.edit_page {
+	font-size: 12px;
 	color: green;
+}
+
+#password_form {
+	display: none;
+}
+
+#password_form .article_password {
+	font-size: 12px;
+	margin: 12px 0 6px 0;
+	width: 200px;
+}
+
+#password_form .create {
+	font-size: 12px;
+	height: 28px;
+	margin: 0;
+	width: 206px;
 }
 
 /* article end */

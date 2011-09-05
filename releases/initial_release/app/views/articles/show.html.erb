@@ -1,3 +1,9 @@
+<% 
+	if @article.isPrivate 
+		render 'private'
+	else	
+%>
+
 <article>
 	<header>
 		<h1>
@@ -9,6 +15,8 @@
 	</section>
 </article>
 <% content_for :footer do %>
-	<%= link_to 'edit page', edit_article_path(@article), :class => :edit_article %>
+	<a href="javascript:void(0);" class="edit_page">edit page</a>
+	<%= render 'form_password' %>
 <% end %>
 
+<% end %>

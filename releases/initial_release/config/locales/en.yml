@@ -4,3 +4,4 @@
 en:
   validation:
       isPrivate_checked_if_password: "If you make your page private you must supply a password"
+      wrong_password: "You entered wrong password"

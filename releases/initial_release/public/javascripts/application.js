@@ -7,9 +7,9 @@
 	}
 	
 	$(document).ready(function(){
-		lock($('#private'));
+		lock($('.private'));
 		
-		$('#private').click(function(event){
+		$('.private').click(function(event){
 			lock($(event.target));
 		});
 		
@@ -20,5 +20,11 @@
 			mouseup: function(event){
 				$(event.target).removeClass('pressed');
 			}
-		})
+		});
+		
+		if($('.edit_page').length != 0) {
+			$('.edit_page').click(function(){
+				$('#password_form').toggle();
+			});
+		}
 	});

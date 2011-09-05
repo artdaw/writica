@@ -1,18 +1,16 @@
 <%= form_for @article, :html => { :id => :article_form } do |f| %>
 		
 		<%= format_error_message(@article, :title) %>
-		<%= f.text_field :title, :class => :title, :placeholder => 'Click here to add title' %>
+		<%= f.text_field :title, :class => :title, :placeholder => 'Add title' %>
 		<%= format_error_message(@article, :content) %>
-		<%= f.text_area :content, :class => :text,  :placeholder => "Click here to create your text! You can use Markdown syntax." %>
+		<%= f.text_area :content, :class => :text,  :placeholder => 'Create your text' %>
 	 	
-		<%= f.text_field :password, :class => :article_password, :placeholder => "Password(to edit the page)" %>
+		<%= f.text_field :password, :class => :article_password, :placeholder => "Add password to edit the page" %>
 		<%= format_error_message(@article, :password) %>
 		
 		<div>
 			<label id="private_label" for="private">&nbsp;</label>
-			<%= f.check_box :isPrivate,  :class =>:private, :title => "Check to make your page private" %>	
-			
-			<% @label_submit = @article.id.nil? ? "Create the Page" : "Save the Page" %>
-			<%= f.submit @label_submit, :class => :create %>	
+			<%= f.check_box :isPrivate,  :class =>:private, :title => "Check to make your page private" %>				
+			<%= f.submit "Create the Page", :class => :create %>	
 		</div>
 <% end %>

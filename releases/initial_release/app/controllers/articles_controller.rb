@@ -4,31 +4,30 @@ class ArticlesController < ApplicationController
     redirect_to root_path
   end
 
-  # GET /articles/1
-  # GET /articles/1.xml
   def show
     @article = Article.find(params[:id])
 
     respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @article }
+      format.html
     end
   end
 
-  # GET /articles/new
-  # GET /articles/new.xml
   def new
     @article = Article.new
 
     respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @article }
+      format.html
     end
   end
 
-  # GET /articles/1/edit
   def edit
     @article = Article.find(params[:id])
+    if params[:article].nil? || params[:article][:password] != @article.password
+      @article.errors.add(:password, I18n.t("validation.wrong_password"))
+      render :action => "show"
+    else
+      render :article => @article, :action => :edit
+    end
   end
 
   # POST /articles
