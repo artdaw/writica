@@ -31,3 +31,5 @@ gem 'sqlite3'
 # end
 gem 'ruby-debug'
 gem 'jquery-rails'
+gem 'wikitext', '~> 2.1.1'
+gem 'typogruby'

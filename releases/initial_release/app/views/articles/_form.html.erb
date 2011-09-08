@@ -5,7 +5,7 @@
 		<%= format_error_message(@article, :content) %>
 		<%= f.text_area :content, :class => :text,  :placeholder => 'Create your text' %>
 	 	
-		<%= f.text_field :password, :class => :article_password, :placeholder => "Add password to edit the page" %>
+		<%= f.password_field :password, :class => :article_password, :placeholder => "Add password to edit the page" %>
 		<%= format_error_message(@article, :password) %>
 		
 		<div>

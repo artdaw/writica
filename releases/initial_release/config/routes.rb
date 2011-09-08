@@ -6,6 +6,12 @@ InitialRelease::Application.routes.draw do
 
   # Sample of regular route:
   match 'articles/:id/edit' => 'articles#edit'
+  match 'articles/:id/check_privacy' => 'articles#check_privacy'
+  
+  #match :no_article, :to => redirect('/public/no_article.html')
+  
+
+  
   # Keep in mind you can assign values other than :controller and :action
 
   # Sample of named route:
@@ -57,4 +63,6 @@ InitialRelease::Application.routes.draw do
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id(.:format)))'
+  
+  #match '*', :to => "home#routing_error" unless ActionController::Base.consider_all_requests_local
 end

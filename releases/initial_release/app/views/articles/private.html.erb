@@ -1,0 +1,8 @@
+<h3 class="password_form">This page is private</h3>
+<%= form_for Article.new, :as => :article, :url => { :action => "check_privacy" }, :html => {:method => :post, :id => :password_form } do |f| %>
+		<%= format_error_message(@article, :password) %>
+		<br />
+		<%= f.text_field :password, :class => :article_password, :placeholder => "Enter password to view a page" %>
+		<br />
+		<%= f.submit 'View a Page', :class => :create %>	
+<% end %>

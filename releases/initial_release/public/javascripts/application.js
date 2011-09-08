@@ -25,6 +25,7 @@
 		if($('.edit_page').length != 0) {
 			$('.edit_page').click(function(){
 				$('#password_form').toggle();
+				$('#article_password').focus();
 			});
 		}
 	});
